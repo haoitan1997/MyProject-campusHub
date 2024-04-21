@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css"/>
+    <title>登录</title>
+</head>
+<body>
+    
+   <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form onsubmit="return false" action="##">
+                <div class="input-box">
+                    <input type="tel" id="user" name="user" required/>
+                    <label>用户名</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="pw" name="pw" required/>
+                    <label>密码</label>
+                </div>
+                <div class="remember">
+                    <label>
+                        <input type="checkbox"/>
+                        Rember me
+                    </label>
+                    <a href="">Forget role?</a>
+                </div>
+                <div id="message1"></div>
+                <button class="btn btn01">Login and Create Role</button>
+                <div class="login-register">
+                    <p>
+                        Don't have a role?
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form onsubmit="return false" action="##">
+                <div class="input-box">
+                    <input type="tel" id="phoneNumber" class="phone" name="username" required/>
+                    <label>输入用户名</label>
+                </div>
+                <div class="input-box">
+                    <input type="tel" id="password" name="password" required/>
+                    <label>输入密码</label>
+                </div>
+                <div id="message">用户名已存在</div>
+                <button class="btn btn02">Register</button>
+                <div class="login-register">
+                    <p>
+                        Already hava role?
+                        <a href="#" class="login-link" aria-disabled="true">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+   </div>
+   <script src="javascript/script.js"></script>
+
+</body>
+</html>

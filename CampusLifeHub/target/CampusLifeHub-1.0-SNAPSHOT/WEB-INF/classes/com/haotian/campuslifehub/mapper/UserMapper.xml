@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haotian.campuslifehub.mapper.UserMapper">
+    <resultMap id="user" type="com.haotian.campuslifehub.bean.UserInfo">
+        <id property="id" column="id"></id>
+        <result property="roleId" column="role_id"></result>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+        <result property="alone" column="alone"></result>
+        <result property="createTime" column="create_time"></result>
+    </resultMap>
+    <resultMap id="role" type="com.haotian.campuslifehub.bean.Role">
+        <id property="id" column="id"></id>
+        <result property="roleName" column="role_name"></result>
+        <result property="avator" column="avator"></result>
+    </resultMap>
+
+    <select id="selectByName" resultMap="user">
+        select id,role_id,username,password,sex,age,alone,create_time from user_info where username = #{username}
+    </select>
+
+    <insert id="addUser">
+        insert into user_info(username,password) values(#{username},#{password})
+    </insert>
+
+    <update id="saveUserInfo">
+        update user_info set age = #{age},sex = #{sex},alone = #{alone} where id = #{id}
+    </update>
+
+    <select id="getRoleCount" resultType="long">
+        select count(*) from role_list
+    </select>
+
+    <update id="saveRole">
+        update user_info set role_id = #{roleId} where username=#{username}
+    </update>
+
+    <select id="selectRoleById" resultMap="role">
+        select * from role_list where id = #{id}
+    </select>
+</mapper>

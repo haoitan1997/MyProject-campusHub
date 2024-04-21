@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haotian.campuslifehub.mapper.ArticleMapper">
+    <resultMap id="articleInfo" type="com.haotian.campuslifehub.bean.other.ArticleInfo">
+        <result property="roleName" column="role_name"></result>
+        <result property="avator" column="avator"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+        <result property="alone" column="alone"></result>
+        <result property="content" column="content"></result>
+        <result property="image" column="image"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="comments" column="comments"></result>
+        <result property="dianzan" column="dianzan"></result>
+    </resultMap>
+
+    <select id="getAllArticle" resultMap="articleInfo">
+        select r.role_name,r.avator,u.sex,u.age,u.alone,a.content,a.image,a.create_time,a.comments,
+        a.dianzan FROM article a,role_list r,user_info u WHERE u.id = a.user_id AND u.role_id = r.id
+        ORDER BY a.id DESC;
+    </select>
+
+    <insert id="saveArticle">
+        insert article(user_id,content,image) values(#{userId},#{content},#{image})
+    </insert>
+
+</mapper>

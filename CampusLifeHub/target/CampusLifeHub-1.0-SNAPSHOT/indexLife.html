@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css"></link>
+    <link rel="stylesheet" href="css/base.css"></link>
+    <link rel="stylesheet" href="阿里巴巴图标/font_c058skx7gdh/iconfont.css"><link/>
+    <script src="阿里巴巴图标/font_c058skx7gdh/iconfont.js"></script>
+    <title>欢迎来到CampuLifeHub</title>
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+        <video loop autoplay muted src="image/1851190-uhd_3840_2160_25fps.mp4">抱歉，您浏览器不支持该视频</video>
+        <div class="header-center">
+            <div class="header-center-logo">
+                <span class="iconfont icon-logo-cat"></span>
+                <span>校园乐生活</span>
+            </div>
+        </div>
+    </div>
+    <div id="tanchuang" class="tanchuang">
+        <div id="guanbi" class="guanbi">
+            <span class="iconfont icon-guanbi"></span>
+        </div>
+        <div class="sex-div">
+            性别：<span id="man">
+                男<input type="radio" name="sex" value="man" ></input>
+            </span>
+            <span>
+                女<input type="radio" name="sex" value="women" ></input>
+            </span>
+        </div>
+        <div>
+            感情状况：
+            单身<span>
+                <input type="radio" name="isAlone" value="alone">
+            </span>
+            恋爱中<span>
+                <input type="radio" name="isAlone" value="notAlone"></input>
+            </span>
+        </div>
+        <div class="age">
+            年龄：<input id="age_value" type="number"></input>
+        </div>
+        <button id="submit">提交</button></button>
+    </div>
+    <div id="shuoshuo" class="shuoshuo">
+        <div class="first">
+            <span class="wenzi">快捷发布</span>
+            <span id="guanbi1" class="iconfont icon-guanbi"></span>
+        </div>
+        <div class="text">
+            <div class="text1">
+                <textarea class="wenben" placeholder="有什么新鲜事想要分享？" id="wenben"></textarea>
+            </div>
+        </div>
+        <div id="pict" class="pict">
+
+        </div>
+        <div class="third">
+            <span class="tupian">图片</span>
+
+            <button id="fasong">发送</button>
+        </div>
+    </div>
+    <!--主体部分-->
+    <div class="main">
+        <div class="main-center">
+            <div class="main-left">
+                <div>
+                    <span class="iconfont icon-shenghuo"></span>
+                    校园生活
+                </div>
+                <div>
+                    <span class="iconfont icon-jiaotan"></span>
+                    校园喊话
+                </div>
+                <div>
+                    <span class="iconfont icon-color-champion"></span>
+                    校花校草大赛
+                </div>
+                <div>
+                    <span class="iconfont icon-fun"></span>
+                    娱乐
+                </div>
+            </div>
+            <div class="main">
+                <div class="main-top">
+                    <div>日常生活</div>
+                    <div>校园风景</div>
+                    <div>校猫</div>
+                    <div>我爱自拍</div>
+                </div>
+                <div id="main-bottom-template" class="main-bottom-template">
+
+                </div>
+                
+            </div>
+            <div id="main-right" class="main-right">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/indexLife.js"></script>
+</body>
+</html>
